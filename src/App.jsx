@@ -42,7 +42,7 @@ const App = () => {
         throw new Error("Invalid JSON format. Expected { \"data\": [\"A\", \"C\", \"z\"] }");
       }
       console.log("api call ho rha hai")
-      const response = await axios.post("http://localhost:3000/bfhl", parsedInput);
+      const response = await axios.post("https://bajaj-finserv-backend-wmr2.onrender.com/bfhl", parsedInput);
       setResponseData(response.data);
     } catch (err) {
       setError(err.message);
